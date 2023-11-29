@@ -8,9 +8,9 @@ import NumberSorter from './components/numberSorter/numberSorter';
 function App() {
   return (
     <div className="App container-fluid">
-     <WorldPopulationTable props={tenHighestPopulation} />
+     {/* <WorldPopulationTable props={tenHighestPopulation} /> */}
      <HexColorsTable />
-     <NumberSorter />
+     {/* <NumberSorter /> */}
     </div>
   );
 }
