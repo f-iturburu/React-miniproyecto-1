@@ -41,9 +41,11 @@ function HexColorsTable() {
   return (
     <div>
       <div className="container text-center my-4">
-        <h1>30 days of React</h1>
         <h3>Hexadecimal colors generator</h3>
-        <Form>
+        <Form onSubmit={(e) =>{
+          e.preventDefault()
+           setRender(HexColorGridGenerator(amount))
+        }}>
         <div className="d-flex my-3 justify-content-center">
           <Form.Control
             id="colorNum"
@@ -55,7 +57,7 @@ function HexColorsTable() {
             placeholder="Insert the desired amounts of random colors (max 30) "
           />
           <Button
-            onClick={(e) => setRender(HexColorGridGenerator(amount))}
+            type="submit"
             className="ms-3"
             variant="primary"
           >
